@@ -28,6 +28,10 @@ class App extends Component {
         </main>
         <form>
           <div className="form-container">
+            <div className="range-input">
+              <input type="range" />
+              <input type="range" />
+            </div>
             <input
               type="text"
               name="topText"
@@ -37,7 +41,7 @@ class App extends Component {
             />
             <input
               type="text"
-              name="topText"
+              name="bottomText"
               value={this.state.bottomText}
               placeholder="Bottom Text"
               onChange={this.handleChange}
