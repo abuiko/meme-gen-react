@@ -15,6 +15,7 @@ header {
 }
 
 .img-container {
+
   width: 100%;
   background: #000;
   display: flex;
@@ -24,10 +25,25 @@ header {
   position: relative;
 }
 
-
 .img {
-  width: 600px;
+  width: 700px;
   height: 350px;
+}
+
+/* ipad pro */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1) {
+  header {
+    margin: 2rem 0rem 1.2rem;
+  }
+
+}
+
+/* ipad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .img {
+    width: 700px;
+    height: 500px;
+  }
 
 }
 
@@ -36,6 +52,31 @@ header {
     width: 450px;
     height: 290px;
   }
+}
+
+@media screen and (max-width: 450px) {
+  .img {
+    width: 400px;
+    height: 290px;
+  }
+}
+
+
+
+@media screen and (max-width: 390px) {
+  .img {
+    width: 320px;
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .img {
+    width: 280px;
+    height: 200px;
+  }
+
+
 }
 
 .topText,

@@ -3,15 +3,13 @@ import React, { Component } from 'react'
 
 
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      topText: "",
-      bottomText: "",
-      randomImg: "http://i.imgflip.com/1bij.jpg",
-      allImgs: []
-    }
+  state = {
+    topText: "",
+    bottomText: "",
+    randomImg: "http://i.imgflip.com/1bij.jpg",
+    allImgs: []
   }
+
   handleChange = (event) => {
     const { name, value } = event.target
     this.setState({
