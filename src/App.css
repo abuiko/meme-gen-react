@@ -39,16 +39,25 @@ header {
   }
 }
 
-.topText {
+.topText,
+.bottomText {
   position: absolute;
-  top: 7%;
   color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px black;
+}
+
+.topText {
+
+  top: 7%;
+
 }
 
 .bottomText {
-  position: absolute;
+
   bottom: 7%;
-  color: white;
+
 }
 
 form {
