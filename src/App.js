@@ -25,6 +25,8 @@ class App extends Component {
         </header>
         <main className="img-container">
           <img className="img" src={Img} alt="random " />
+          <p className="topText">{this.state.topText}</p>
+          <p className="bottomText">{this.state.bottomText}</p>
         </main>
         <form>
           <div className="form-container">

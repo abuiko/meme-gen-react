@@ -1,6 +1,11 @@
 body {
   background: #21262A;
-  min-height: 100vh;
+
+}
+
+.App {
+  max-width: 800px;
+  margin: auto;
 }
 
 header {
@@ -17,17 +22,40 @@ header {
   justify-content: center;
   align-items: center;
   padding: 1rem 0rem;
+  position: relative;
 }
 
+
 .img {
-  width: 90%;
+  width: 600px;
+  height: 350px;
+
+}
+
+@media screen and (max-width: 600px) {
+  .img {
+    width: 450px;
+    height: 290px;
+  }
+}
+
+.topText {
+  position: absolute;
+  top: 7%;
+  color: white;
+}
+
+.bottomText {
+  position: absolute;
+  bottom: 7%;
+  color: white;
 }
 
 form {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
+  min-height: 40vh;
   width: 100%;
 
 }
