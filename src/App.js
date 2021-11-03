@@ -1,4 +1,4 @@
-import './App.css'
+import './css/App.css'
 import React, { Component } from 'react'
 import Img from './assets/meme.jpeg'
 
@@ -8,7 +8,8 @@ class App extends Component {
     this.state = {
       topText: "",
       bottomText: "",
-      randomImg: ""
+      randomImg: "",
+      allImgs: []
     }
   }
   handleChange = (event) => {
@@ -17,6 +18,20 @@ class App extends Component {
       [name]: value
     })
   }
+
+  componentDidMount() {
+    fetch("https://api.imgflip.com/get_memes")
+      .then(response => response.json())
+      .then(response => {
+        const { memes } = response.data
+        this.setState({
+          allImg: memes
+        })
+      })
+  }
+
+
+
   render() {
     return (
       <div className="App">
