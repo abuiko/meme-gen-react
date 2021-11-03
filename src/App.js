@@ -1,6 +1,6 @@
 import './css/App.css'
 import React, { Component } from 'react'
-import Img from './assets/meme.jpeg'
+
 
 class App extends Component {
   constructor() {
@@ -8,7 +8,7 @@ class App extends Component {
     this.state = {
       topText: "",
       bottomText: "",
-      randomImg: "",
+      randomImg: "http://i.imgflip.com/1bij.jpg",
       allImgs: []
     }
   }
@@ -25,11 +25,19 @@ class App extends Component {
       .then(response => {
         const { memes } = response.data
         this.setState({
-          allImg: memes
+          allImgs: memes
         })
       })
   }
 
+  handleClick = (e) => {
+    e.preventDefault()
+    const randomNum = Math.floor(Math.random() * this.state.allImgs.length)
+    const random = this.state.allImgs[randomNum].url
+    this.setState({
+      randomImg: random
+    })
+  }
 
 
   render() {
@@ -39,7 +47,7 @@ class App extends Component {
           <h1>Meme Generator</h1>
         </header>
         <main className="img-container">
-          <img className="img" src={Img} alt="random " />
+          <img className="img" src={this.state.randomImg} alt="random " />
           <p className="topText">{this.state.topText}</p>
           <p className="bottomText">{this.state.bottomText}</p>
         </main>
@@ -63,7 +71,7 @@ class App extends Component {
               placeholder="Bottom Text"
               onChange={this.handleChange}
             />
-            <button>Generate</button>
+            <button onClick={this.handleClick}>Generate</button>
           </div>
 
         </form>
