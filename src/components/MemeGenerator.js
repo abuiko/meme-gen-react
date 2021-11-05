@@ -1,12 +1,12 @@
 import React from 'react'
 
-const MemeGenerator = () => {
+const MemeGenerator = props => {
     return (
         <div>
             <div className="img-container">
-                <img className="img" src={this.state.randomImg} alt="random " />
-                <p className="topText">{this.state.topText}</p>
-                <p className="bottomText">{this.state.bottomText}</p>
+                <img className="img" src={props.randomImg} alt="random " />
+                <p className="topText">{props.topText}</p>
+                <p className="bottomText">{props.bottomText}</p>
             </div>
             <form>
                 <div className="form-container">
@@ -17,20 +17,19 @@ const MemeGenerator = () => {
                     <input
                         type="text"
                         name="topText"
-                        value={this.state.topText}
+                        value={props.topText}
                         placeholder="Top Text"
-                        onChange={this.handleChange}
+                        onChange={props.handleChange}
                     />
                     <input
                         type="text"
                         name="bottomText"
-                        value={this.state.bottomText}
+                        value={props.bottomText}
                         placeholder="Bottom Text"
-                        onChange={this.handleChange}
+                        onChange={props.handleChange}
                     />
-                    <button onClick={this.handleClick}>Generate</button>
+                    <button onClick={props.handleClick}>Generate</button>
                 </div>
-
             </form>
         </div>
     )

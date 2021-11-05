@@ -1,6 +1,7 @@
 import './css/App.css'
 import React, { Component } from 'react'
 import Header from "./components/Header"
+import MemeGenerator from "./components/MemeGenerator"
 
 
 class App extends Component {
@@ -9,13 +10,6 @@ class App extends Component {
     bottomText: "",
     randomImg: "http://i.imgflip.com/1bij.jpg",
     allImgs: []
-  }
-
-  handleChange = (event) => {
-    const { name, value } = event.target
-    this.setState({
-      [name]: value
-    })
   }
 
   componentDidMount() {
@@ -29,6 +23,13 @@ class App extends Component {
       })
   }
 
+  handleChange = (event) => {
+    const { name, value } = event.target
+    this.setState({
+      [name]: value
+    })
+  }
+
   handleClick = (e) => {
     e.preventDefault()
     const randomNum = Math.floor(Math.random() * this.state.allImgs.length)
@@ -38,40 +39,17 @@ class App extends Component {
     })
   }
 
-
   render() {
     return (
       <div className="App">
         <Header />
-        <main className="img-container">
-          <img className="img" src={this.state.randomImg} alt="random " />
-          <p className="topText">{this.state.topText}</p>
-          <p className="bottomText">{this.state.bottomText}</p>
-        </main>
-        <form>
-          <div className="form-container">
-            <div className="range-input">
-              <input type="range" />
-              <input type="range" />
-            </div>
-            <input
-              type="text"
-              name="topText"
-              value={this.state.topText}
-              placeholder="Top Text"
-              onChange={this.handleChange}
-            />
-            <input
-              type="text"
-              name="bottomText"
-              value={this.state.bottomText}
-              placeholder="Bottom Text"
-              onChange={this.handleChange}
-            />
-            <button onClick={this.handleClick}>Generate</button>
-          </div>
-
-        </form>
+        <MemeGenerator
+          topText={this.state.topText}
+          bottomText={this.state.bottomText}
+          randomImg={this.state.randomImg}
+          handleChange={this.handleChange}
+          handleClick={this.handleClick}
+        />
       </div>
     )
   }
