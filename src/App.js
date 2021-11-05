@@ -1,5 +1,6 @@
 import './css/App.css'
 import React, { Component } from 'react'
+import Header from "./components/Header"
 
 
 class App extends Component {
@@ -41,9 +42,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <h1>Meme Generator</h1>
-        </header>
+        <Header />
         <main className="img-container">
           <img className="img" src={this.state.randomImg} alt="random " />
           <p className="topText">{this.state.topText}</p>
