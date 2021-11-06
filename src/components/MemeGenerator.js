@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 const MemeGenerator = props => {
     return (
-        <div>
+        <Fragment>
             <div className="img-container">
-                <img className="img" src={props.randomImg} alt="random " />
+                <img className="img" src={props.randomImg} alt="random meme" />
                 <p className="topText">{props.topText}</p>
                 <p className="bottomText">{props.bottomText}</p>
             </div>
@@ -31,7 +31,7 @@ const MemeGenerator = props => {
                     <button onClick={props.handleClick}>Generate</button>
                 </div>
             </form>
-        </div>
+        </Fragment>
     )
 }
 
