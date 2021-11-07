@@ -2,6 +2,7 @@ import './css/App.css'
 import React, { Component } from 'react'
 import Header from "./components/Header"
 import MemeGenerator from "./components/MemeGenerator"
+// import { BrowserRouter as Router, Routes as Switch, Route } from 'react-router-dom';
 
 
 class App extends Component {
@@ -41,6 +42,7 @@ class App extends Component {
 
   render() {
     return (
+
       <div className="App">
         <Header />
         <MemeGenerator
@@ -51,6 +53,9 @@ class App extends Component {
           handleClick={this.handleClick}
         />
       </div>
+
+
+
     )
   }
 
