@@ -1,3 +1,5 @@
+/* general styling */
+
 body {
   background: #21262A;
 }
@@ -7,76 +9,44 @@ body {
   margin: auto;
 }
 
+/* header styling */
+
 header {
   font-size: 0.6rem;
   color: #fff;
   padding: 0.5rem 1.3rem;
   font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
 }
 
-.img-container {
+.header-btn {
+  padding: 0.7rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #5D819C;
+  cursor: pointer;
+}
 
+h1 {
+  color: white;
+}
+
+
+/* meme generator container styling */
+.img-container {
   width: 100%;
-  background: #000;
+  background: #1A1E21;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0rem;
+  padding: 2rem 0rem;
   position: relative;
 }
 
 .img {
-  width: 700px;
-  height: 350px;
-}
-
-/* ipad pro */
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1) {
-  header {
-    margin: 2rem 0rem 1.2rem;
-  }
-
-}
-
-/* ipad */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  .img {
-    width: 700px;
-    height: 500px;
-  }
-
-}
-
-@media screen and (max-width: 600px) {
-  .img {
-    width: 450px;
-    height: 290px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .img {
-    width: 400px;
-    height: 290px;
-  }
-}
-
-
-
-@media screen and (max-width: 390px) {
-  .img {
-    width: 320px;
-    height: 230px;
-  }
-}
-
-@media screen and (max-width: 290px) {
-  .img {
-    width: 280px;
-    height: 200px;
-  }
-
-
+  width: 650px;
+  height: 450px;
 }
 
 .topText,
@@ -186,4 +156,55 @@ button {
   text-transform: uppercase;
   font-weight: bold;
   border: none;
+}
+
+
+
+
+/* MEDIA QUERIES */
+/* ipad pro */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1) {
+  header {
+    margin: 2rem 0rem 1.2rem;
+  }
+
+}
+
+/* ipad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .img {
+    width: 700px;
+    height: 500px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .img {
+    width: 450px;
+    height: 290px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .img {
+    width: 400px;
+    height: 290px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .img {
+    width: 320px;
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .img {
+    width: 280px;
+    height: 200px;
+  }
+
+
 }
