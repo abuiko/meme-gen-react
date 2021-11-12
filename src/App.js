@@ -2,8 +2,7 @@ import './css/App.css'
 import React, { Component } from 'react'
 import Header from "./components/Header"
 import MemeGenerator from "./components/MemeGenerator"
-import FindMeme from "./components/FindMeme"
-import { BrowserRouter as Router, Routes as Switch, Route } from 'react-router-dom';
+
 
 
 class App extends Component {
@@ -43,25 +42,22 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className="App">
-          <Header />
-          <Switch>
-            <Route path="/findmeme" component={FindMeme} />
-            <Route path="/start" component={MemeGenerator} />
-          </Switch>
-          <MemeGenerator
-            topText={this.state.topText}
-            bottomText={this.state.bottomText}
-            randomImg={this.state.randomImg}
-            handleChange={this.handleChange}
-            handleClick={this.handleClick}
-          />
-        </div>
-      </Router>
+
+      <div className="App">
+        <Header />
+
+        <MemeGenerator
+          topText={this.state.topText}
+          bottomText={this.state.bottomText}
+          randomImg={this.state.randomImg}
+          handleChange={this.handleChange}
+          handleClick={this.handleClick}
+        />
+      </div>
+
     )
   }
 
 }
 
-export default App;
+export default App
