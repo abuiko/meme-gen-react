@@ -1,12 +1,14 @@
 import React, { Fragment } from 'react'
+import UserGetMemes from "../hooks/userGetMemes"
 
-const MemeGenerator = props => {
+const MemeGenerator = () => {
+    const { topText, bottomText, randomImg, handleChange, handleClick } = UserGetMemes()
     return (
         <Fragment>
             <div className="img-container">
-                <img className="img" src={props.randomImg} alt="random meme" />
-                <p className="topText">{props.topText}</p>
-                <p className="bottomText">{props.bottomText}</p>
+                <img className="img" src={randomImg} alt="random meme" />
+                <p className="topText">{topText}</p>
+                <p className="bottomText">{bottomText}</p>
             </div>
             <form>
                 <div className="form-container">
@@ -17,18 +19,18 @@ const MemeGenerator = props => {
                     <input
                         type="text"
                         name="topText"
-                        value={props.topText}
+                        value={topText}
                         placeholder="Top Text"
-                        onChange={props.handleChange}
+                        onChange={handleChange}
                     />
                     <input
                         type="text"
                         name="bottomText"
-                        value={props.bottomText}
+                        value={bottomText}
                         placeholder="Bottom Text"
-                        onChange={props.handleChange}
+                        onChange={handleChange}
                     />
-                    <button onClick={props.handleClick}>Generate</button>
+                    <button onClick={handleClick}>Generate</button>
                 </div>
             </form>
         </Fragment>
