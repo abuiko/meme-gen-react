@@ -29,7 +29,11 @@ function UserGetMemes() {
         e.preventDefault()
         const randomNum = Math.floor(Math.random() * allImgs.length)
         const random = allImgs[randomNum].url
-        setRandomImg(prevRandom => ({ ...prevRandom, random }))
+        setRandomImg(prevRandom => {
+            return {
+                ...prevRandom, random
+            }
+        })
     }
 
 

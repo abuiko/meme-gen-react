@@ -1,19 +1,19 @@
-import React, { Fragment } from 'react'
-import Header from "./Header"
+import React from 'react'
+
 
 const FindMeme = () => {
     return (
-        <Fragment>
-            <Header />
-            <form>
-                <input
-                    type="text"
-                    onChange=""
-                    placeholder="Search memes..."
-                />
-                <button>Click</button>
-            </form>
-        </Fragment>
+
+
+        <form>
+            <input
+                type="text"
+                onChange=""
+                placeholder="Search memes..."
+            />
+            <button>Click</button>
+        </form>
+
     )
 }
 

@@ -30,8 +30,10 @@ header {
 .header-btn {
   padding: 0.7rem 1rem;
   border-radius: 0.4rem;
-  background-color: #5D819C;
+  background-color: #ebebeb;
   cursor: pointer;
+  color: black;
+
 }
 
 h1 {
