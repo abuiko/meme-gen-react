@@ -1,0 +1,47 @@
+/* MEDIA QUERIES */
+/* ipad pro */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1) {
+    header {
+        margin: 2rem 0rem 1.2rem;
+    }
+
+}
+
+/* ipad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .img {
+        max-width: 700px;
+        max-height: 500px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .img {
+        max-width: 450px;
+        max-height: 290px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .img {
+        max-width: 400px;
+        max-height: 290px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .img {
+        max-width: 320px;
+        max-height: 230px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .img {
+        max-width: 280px;
+        max-height: 200px;
+    }
+
+
+}

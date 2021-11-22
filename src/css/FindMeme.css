@@ -1,0 +1,30 @@
+.findMeme_container {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.findMeme_form {
+    display: flex;
+    width: 60%;
+
+}
+
+.findMeme_input,
+.findMeme_btn {
+    padding: 10px 15px;
+}
+
+.findMeme_input {
+    width: 80%;
+}
+
+.findMeme_btn {
+    width: 20%;
+    display: block;
+
+}

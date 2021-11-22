@@ -1,4 +1,7 @@
 import './css/App.css'
+import './css/FindMeme.css'
+import './css/MemeGenerator.css'
+import './css/Media.css'
 import React from 'react'
 import { BrowserRouter as Router, Link, Route, Routes as Switch } from "react-router-dom"
 import FindMeme from "./components/FindMeme"

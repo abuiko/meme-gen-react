@@ -10,13 +10,14 @@ const MemeGenerator = () => {
                 <p className="topText">{topText}</p>
                 <p className="bottomText">{bottomText}</p>
             </div>
-            <form>
+            <form className="memeGenerator_form">
                 <div className="form-container">
                     <div className="range-input">
                         <input type="range" />
                         <input type="range" />
                     </div>
                     <input
+                        className="memeGenerator_input"
                         type="text"
                         name="topText"
                         value={topText}
@@ -24,13 +25,17 @@ const MemeGenerator = () => {
                         onChange={handleChange}
                     />
                     <input
+                        className="memeGenerator_input"
                         type="text"
                         name="bottomText"
                         value={bottomText}
                         placeholder="Bottom Text"
                         onChange={handleChange}
                     />
-                    <button onClick={handleClick}>Generate</button>
+                    <button
+                        className="memeGenerator_btn"
+                        onClick={handleClick}
+                    >Generate</button>
                 </div>
             </form>
         </Fragment>
