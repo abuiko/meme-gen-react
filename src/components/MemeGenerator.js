@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import UserGetMemes from "../hooks/userGetMemes"
 
 const MemeGenerator = () => {
-    const { topText, bottomText, randomImg, handleChange, handleClick } = UserGetMemes()
+    const { topText, bottomText, randomImg, handleChange } = UserGetMemes()
     return (
         <Fragment>
             <div className="img-container">
@@ -34,7 +34,7 @@ const MemeGenerator = () => {
                     />
                     <button
                         className="memeGenerator_btn"
-                        onClick={handleClick}
+
                     >Generate</button>
                 </div>
             </form>

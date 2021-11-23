@@ -1,9 +1,23 @@
 import React from 'react'
-import UserGetMemes from "../hooks/userGetMemes"
+import { useState, useEffect } from 'react'
+
 
 
 const FindMeme = () => {
-    const { allImgs } = UserGetMemes()
+
+    const [allImgs, setAllImgs] = useState([])
+
+
+    const url = "https://api.imgflip.com/get_memes"
+
+    useEffect(() => {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => setAllImgs(data.data.memes))
+    }, [])
+
+    console.log(allImgs[0])
+
 
     return (
         <div className="findMeme">
@@ -18,12 +32,12 @@ const FindMeme = () => {
                     <button className="findMeme_btn">Click</button>
                 </form>
                 <div className="findMeme_gallery">
-                    <img className="findMeme_img" src="http://i.imgflip.com/1bij.jpg" />
-                    <img className="findMeme_img" src="http://i.imgflip.com/1bij.jpg" />
-                    <img className="findMeme_img" src="http://i.imgflip.com/1bij.jpg" />
-                    <img className="findMeme_img" src="http://i.imgflip.com/1bij.jpg" />
-                    <img className="findMeme_img" src="http://i.imgflip.com/1bij.jpg" />
-                    <img className="findMeme_img" src="http://i.imgflip.com/1bij.jpg" />
+                    <img className="findMeme_img" src="http://i.imgflip.com/1bij.jpg" alt="meme1" />
+                    <img className="findMeme_img" src="http://i.imgflip.com/1bij.jpg" alt="meme2" />
+                    <img className="findMeme_img" src="http://i.imgflip.com/1bij.jpg" alt="meme3" />
+                    <img className="findMeme_img" src="http://i.imgflip.com/1bij.jpg" alt="meme4" />
+                    <img className="findMeme_img" src="http://i.imgflip.com/1bij.jpg" alt="meme5" />
+                    <img className="findMeme_img" src="http://i.imgflip.com/1bij.jpg" alt="meme6" />
                 </div>
 
             </div>
