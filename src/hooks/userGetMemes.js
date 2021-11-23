@@ -37,7 +37,7 @@ function UserGetMemes() {
     }
 
 
-    return { topText, bottomText, randomImg, handleChange, handleClick }
+    return { topText, bottomText, randomImg, allImgs, handleChange, handleClick }
 }
 
 export default UserGetMemes

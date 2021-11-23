@@ -1,16 +1,24 @@
-.findMeme_container {
-    min-height: 50vh;
+.findMeme {
+    min-height: 90vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    justify-content: center;
 }
 
 
+.findMeme_container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
 
 .findMeme_form {
     display: flex;
     width: 60%;
+    margin-bottom: 3rem;
 
 }
 
@@ -27,4 +35,15 @@
     width: 20%;
     display: block;
 
+}
+
+.findMeme_gallery {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.findMeme_img {
+    width: 350px;
+    margin: 0.5rem;
 }
